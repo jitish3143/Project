@@ -19,7 +19,7 @@ from torchvision import transforms
 import numpy as np
 
 parser = argparse.ArgumentParser(description='Photorealistic Image Stylization')
-parser.add_argument('--model_path', help='folder to model path', default='ckpt/ade20k-resnet50dilated-ppm_deepsup')
+parser.add_argument('--model_path', help='folder to model path', default='ckpt/ade20k-resnet50dilated-ppm_deepsup/')
 parser.add_argument('--suffix', default='_epoch_20.pth', help="which snapshot to load")
 parser.add_argument('--arch_encoder', default='resnet50_dilated8', help="architecture of net_encoder")
 parser.add_argument('--arch_decoder', default='ppm_bilinear_deepsup', help="architecture of net_decoder")
@@ -43,7 +43,7 @@ parser.add_argument('--save_intermediate', action='store_true', default=False)
 parser.add_argument('--fast', action='store_true', default=False)
 parser.add_argument('--no_post', action='store_true', default=False)
 parser.add_argument('--output_visualization', action='store_true', default=False)
-parser.add_argument('--cuda', type=int, default=1, help='Enable CUDA.')
+parser.add_argument('--cuda', type=int, default=0, help='Enable CUDA.')
 parser.add_argument('--label_mapping', type=str, default='ade20k_semantic_rel.npy')
 args = parser.parse_args()
 
@@ -126,7 +126,7 @@ process_stylization_ade20k_ssn.stylization(
     content_seg_path=args.content_seg_path,
     style_seg_path=args.style_seg_path,
     output_image_path=args.output_image_path,
-    cuda=True,
+    cuda=False,
     save_intermediate=args.save_intermediate,
     no_post=args.no_post,
     label_remapping=segReMapping,

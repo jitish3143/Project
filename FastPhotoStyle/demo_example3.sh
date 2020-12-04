@@ -11,4 +11,4 @@ axel -n 1 https://nerdist.com/wp-content/uploads/2017/11/Stranger_Things_S2_news
 convert -resize 50% content3.png content3.png;
 convert -resize 50% style3.png style3.png;
 cd ..;
-python demo_with_ade20k_ssn.py --cuda 1;
+python demo_with_ade20k_ssn.py;
