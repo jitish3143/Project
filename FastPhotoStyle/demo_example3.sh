@@ -15,7 +15,7 @@ export PYTHONPATH=$PYTHONPATH:segmentation
 for a in `seq 1 6`
 do 
 	echo $a; 
-  convert -resize 50% d1/im$a.png d1/im$a-$a.png;
+  convert -resize 50% d1/im$a-$a.png d1/im$a-$a.png;
   convert -resize 50% d1/tar$a.png d1/tar$a.png;
 	python demo_with_ade20k_ssn.py --content_image_path d1/im$a-$a.png --style_image_path d1/tar$a.png --content_seg_path results/content-$a-$a-seg.pgm --style_seg_path results/style-$a-$a-seg.pgm --output_image_path results/out-PhotoWCT-SEG-$a-$a.png
 done
