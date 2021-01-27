@@ -12,7 +12,7 @@ export PYTHONPATH=$PYTHONPATH:segmentation
 # convert -resize 50% style3.png style3.png;
 # cd ..;
 
-for a in `seq 1 30`
+for a in `seq 1 60`
 do 
 	echo $a;
 
