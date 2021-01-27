@@ -16,9 +16,9 @@ for a in `seq 1 30`
 do 
 	echo $a;
 
-  convert -resize 50% train/im$a.png train/im$a.png;
-  convert -resize 50% train/tar$a.png train/tar$a.png;
-	python demo_with_ade20k_ssn.py --no_post  --content_image_path train/im$a.png --style_image_path train/tar$a.png --content_seg_path train_results/content-$a-seg.pgm --style_seg_path train_results/style-$a-seg.pgm --output_image_path train_results/out-PhotoWCT-SEG-$a-$a.png
+  # convert -resize 50% train/im$a.png train/im$a.png;
+  # convert -resize 50% train/tar$a.png train/tar$a.png;
+	python demo_with_ade20k_ssn.py --no_post  --content_image_path train_new/im$a.png --style_image_path train_new/tar$a.png --content_seg_path train_results_new/content-$a-seg.pgm --style_seg_path train_results_new/style-$a-seg.pgm --output_image_path train_results_new/out-PhotoWCT-SEG-$a-$a.png
 done
 
 
