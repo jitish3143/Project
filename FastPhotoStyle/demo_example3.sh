@@ -23,6 +23,9 @@ do
 done
 
 
+
+# python demo_with_ade20k_ssn.py   --content_image_path train_new/im1.png --style_image_path train_new/i1.jpg --content_seg_path post_train_results_new/content-11-seg.pgm --style_seg_path post_train_results_new/style-11-seg.pgm --output_image_path post_train_results_new/out-PhotoWCT-111-SEG.png
+
 # python demo_with_ade20k_ssn.py --content_image_path d1/im5.png --style_image_path d1/tar6.png --content_seg_path results/content-6-seg.pgm --style_seg_path results/style-6-seg.pgm --output_image_path results/out-PhotoWCT-SEG-6.png
 # # done
 
