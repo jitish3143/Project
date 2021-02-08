@@ -12,14 +12,14 @@ export PYTHONPATH=$PYTHONPATH:segmentation
 # convert -resize 50% style3.png style3.png;
 # cd ..;
 
-for a in `seq 1 60`
+for a in `seq 1 104`
 do 
 	echo $a;
 
   # convert -resize 50% train/im$a.png train/im$a.png;
   # convert -resize 50% train/tar$a.png train/tar$a.png;
   #--no_post
-	python demo_with_ade20k_ssn.py   --content_image_path train_new/im$a.png --style_image_path train_new/tar$a.png --content_seg_path post_train_results_new/content-$a-seg.pgm --style_seg_path post_train_results_new/style-$a-seg.pgm --output_image_path post_train_results_new/out-PhotoWCT-SEG-$a-$a.png
+	python demo_with_ade20k_ssn.py   --content_image_path train_new/im$a.png --style_image_path train_new/tar$a.png --content_seg_path train_results_new/content-$a-seg.pgm --style_seg_path train_results_new/style-$a-seg.pgm --output_image_path train_results_new/out-PhotoWCT-SEG-$a-$a.png
 done
 
 
